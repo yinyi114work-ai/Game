@@ -9,3 +9,9 @@ html,body{height:100%;height:100dvh}#app{width:100%;max-width:530px;height:100dv
 @media(max-height:690px){.hud{height:112px}.world{height:calc(100dvh - 181px)}.footer{height:69px}.character{top:31%}.object .tag{bottom:-8px}}
 
 .grades{font-size:13px;color:#975b4d;margin-top:12px}.grades b{font-size:19px;color:#db704c}
+
+/* V3.4: large, unmissable judgment on every valid tap */
+#floating{pointer-events:none}.grade-pop{position:absolute;z-index:80;display:flex;flex-direction:column;align-items:center;gap:3px;transform:translate(-50%,0);animation:gradeBurst 1.1s ease-out forwards;white-space:nowrap;filter:drop-shadow(0 3px 2px #4a2830a6)}
+.grade-pop strong{font-size:clamp(23px,6vw,35px);font-weight:1000;letter-spacing:1px;-webkit-text-stroke:1px #744021;color:#ffe569;text-shadow:0 3px 0 #ac622b,0 0 9px #fff6c0}
+.grade-pop.good strong{color:#bce8ff;-webkit-text-stroke:1px #2c6080;text-shadow:0 3px 0 #246a92}.grade-pop small{font-size:13px;color:white;font-weight:900;background:#573f4bd9;border-radius:12px;padding:3px 9px;border:1px solid #fff9}
+@keyframes gradeBurst{0%{opacity:0;transform:translate(-50%,12px) scale(.5)}16%{opacity:1;transform:translate(-50%,-14px) scale(1.18)}42%{transform:translate(-50%,-18px) scale(1)}78%{opacity:1}100%{opacity:0;transform:translate(-50%,-54px) scale(1)}}
