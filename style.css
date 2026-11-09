@@ -75,3 +75,12 @@ html,body{background:#e7cbd2}#app{background:#fff0e9;box-shadow:0 0 0 2px #fffff
 }
 @keyframes hangSignal{from{filter:brightness(1);scale:1}to{filter:brightness(1.24);scale:1.035}}
 .object.telephone.hangup-ready{animation:hangSignal .55s ease-in-out infinite alternate!important}
+
+/* V3.8: phone dialogue lives beside the telephone; never covers other tasks. */
+#callBanner:not(.hidden){position:absolute!important;z-index:7!important;top:calc(17% + 17%)!important;right:3%!important;left:auto!important;transform:none!important;width:44%!important;max-width:190px!important;min-height:0!important;padding:10px 9px!important;border:2px solid #9b6e91!important;border-radius:17px 17px 5px 17px!important;background:#fffdf8!important;color:#704c64!important;box-shadow:0 4px 0 #9b6e9133,0 6px 14px #67495d33!important;font-size:13px!important;line-height:1.35!important;font-weight:800!important;letter-spacing:0!important;text-align:center!important;animation:none!important;scale:1!important;pointer-events:none!important;display:block!important;}
+#callBanner.ready:not(.hidden){background:#e5fff1!important;color:#137650!important;border-color:#20ac74!important;box-shadow:0 0 0 3px #7be9ad66!important;animation:byePulse .7s ease-in-out infinite alternate!important;pointer-events:auto!important;cursor:pointer!important}
+#callBanner:not(.hidden)::after{content:'';position:absolute;right:15px;bottom:-10px;border-left:10px solid transparent;border-right:0 solid transparent;border-top:11px solid #9b6e91}
+#callBanner.ready:not(.hidden)::after{border-top-color:#20ac74}
+@keyframes byePulse{to{filter:brightness(1.04);transform:scale(1.035)}}
+.telephone.hangup-ready{filter:drop-shadow(0 0 11px #39d997)!important;animation:byePulse .7s ease-in-out infinite alternate!important}
+@media(max-height:740px){#callBanner:not(.hidden){top:calc(17% + 14%)!important;font-size:12px!important;padding:7px!important}}
