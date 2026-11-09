@@ -7,3 +7,5 @@ html,body{height:100%;height:100dvh}#app{width:100%;max-width:530px;height:100dv
 .combo{position:absolute;z-index:9;left:50%;top:31%;transform:translateX(-50%) scale(.7);opacity:0;color:#ffefaa;text-shadow:0 3px #934e42,0 0 12px #e46e48;font-weight:1000;font-size:29px;pointer-events:none;white-space:nowrap}.combo.show{animation:combo .85s ease-out}@keyframes combo{15%{opacity:1;transform:translateX(-50%) scale(1.18)}65%{opacity:1;transform:translateX(-50%) scale(1)}100%{opacity:0;transform:translateX(-50%) translateY(-25px)}}
 @media(max-width:370px){.brand b{font-size:18px}.clock{font-size:24px}.metrics{gap:11px}.computer .screen{width:82px;height:65px}.telephone .object-art{transform:scale(.84)}.folder{width:79px}.calculator .object-art{transform:scale(.82)}.bag .object-art{transform:scale(.84)}.object .tag{font-size:10px}}
 @media(max-height:690px){.hud{height:112px}.world{height:calc(100dvh - 181px)}.footer{height:69px}.character{top:31%}.object .tag{bottom:-8px}}
+
+.grades{font-size:13px;color:#975b4d;margin-top:12px}.grades b{font-size:19px;color:#db704c}
