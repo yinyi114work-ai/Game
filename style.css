@@ -52,3 +52,26 @@ html,body{background:#e7cbd2}#app{background:#fff0e9;box-shadow:0 0 0 2px #fffff
 .call-banner.hidden{display:none!important}.call-banner.ready{background:linear-gradient(135deg,#56c58d,#198c6d);box-shadow:0 7px 0 #14654e,0 0 25px #70efb8;animation:hangPulse .65s infinite alternate}
 .object.telephone.hangup-ready{z-index:25!important;filter:drop-shadow(0 0 18px #3cf8b3)!important;animation:hangPulse .65s infinite alternate!important}.object.telephone.hangup-ready .tag{background:#1b9b73!important;color:white!important}.object.telephone.hangup-ready .tag::after{content:'・點擊掛斷';font-size:.8em}.object.telephone.phone-in-call .tag::after{content:'・通話中';font-size:.8em}
 @keyframes hangPulse{from{transform:scale(1)}to{transform:scale(1.08)}}@keyframes callBreath{from{opacity:.85}to{opacity:1}}
+
+
+/* V3.7: telephone action is a persistent, high-contrast in-game control. */
+#callBanner:not(.hidden){
+ position:absolute!important;z-index:100!important;
+ left:50%!important;top:27%!important;transform:translateX(-50%)!important;
+ width:min(92%,380px)!important;min-height:58px!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ text-align:center!important;line-height:1.35!important;
+ border:3px solid #fff!important;border-radius:18px!important;
+ background:#754c64!important;color:#fff!important;
+ box-shadow:0 6px 0 #503046,0 10px 25px #39252c77!important;
+ font-size:16px!important;font-weight:900!important;padding:9px 14px!important;
+ pointer-events:auto!important;
+}
+#callBanner.ready:not(.hidden){
+ background:#11a979!important;border-color:#f6ffbd!important;
+ box-shadow:0 5px 0 #087451,0 0 0 6px #6cf9a655,0 10px 30px #047b6c99!important;
+ animation:hangSignal .55s ease-in-out infinite alternate!important;
+ cursor:pointer!important;
+}
+@keyframes hangSignal{from{filter:brightness(1);scale:1}to{filter:brightness(1.24);scale:1.035}}
+.object.telephone.hangup-ready{animation:hangSignal .55s ease-in-out infinite alternate!important}
