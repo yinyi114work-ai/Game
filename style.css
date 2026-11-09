@@ -84,3 +84,43 @@ html,body{background:#e7cbd2}#app{background:#fff0e9;box-shadow:0 0 0 2px #fffff
 @keyframes byePulse{to{filter:brightness(1.04);transform:scale(1.035)}}
 .telephone.hangup-ready{filter:drop-shadow(0 0 11px #39d997)!important;animation:byePulse .7s ease-in-out infinite alternate!important}
 @media(max-height:740px){#callBanner:not(.hidden){top:calc(17% + 14%)!important;font-size:12px!important;padding:7px!important}}
+
+
+/* V3.9 compact in-scene manga speech bubble; positioned relative to .world */
+.world #callBanner:not(.hidden){
+ position:absolute!important;z-index:6!important;
+ top:40%!important;right:3%!important;left:auto!important;
+ transform:none!important;scale:1!important;
+ width:clamp(100px,32%,142px)!important;max-width:142px!important;
+ min-height:0!important;max-height:64px!important;
+ padding:7px 9px!important;margin:0!important;
+ border:2px solid #885a6c!important;border-radius:15px 15px 5px 15px!important;
+ background:#fffaf2!important;color:#634451!important;
+ box-shadow:0 3px 0 #b7858a66,0 7px 15px #67445a22!important;
+ font-size:11px!important;line-height:1.28!important;font-weight:800!important;
+ text-align:center!important;letter-spacing:0!important;
+ overflow:visible!important;pointer-events:none!important;
+ animation:none!important;white-space:normal!important;
+}
+.world #callBanner:not(.hidden)::after{
+ content:'';position:absolute;right:19px;bottom:-9px;
+ border-left:9px solid transparent;border-top:9px solid #885a6c;
+ border-right:0;border-bottom:0;
+}
+.world #callBanner.ready:not(.hidden){
+ background:#e4fff0!important;color:#086344!important;border-color:#1ba77b!important;
+ box-shadow:0 0 0 3px #8aebc466,0 3px 0 #0c8058!important;
+ animation:byePulse .6s ease-in-out infinite alternate!important;
+ pointer-events:auto!important;
+}
+.world #callBanner.ready:not(.hidden)::after{border-top-color:#1ba77b!important}
+.telephone.hangup-ready .phonebase{background:linear-gradient(#65dca5,#0d9d70)!important;border-color:#0a855e!important}
+.telephone.hangup-ready .receiver{border-color:#0d9d70!important}
+.telephone.hangup-ready .tag{background:#e4fff0!important;color:#087c55!important}
+.telephone.phone-in-call .tag::after{content:''!important}
+.telephone.hangup-ready .tag::after{content:' 掛斷'!important}
+@media(max-width:370px){.world #callBanner:not(.hidden){width:34%!important;font-size:10px!important;right:1%!important}}
+/* soften floating score and emphasize integrated stationery aesthetic */
+.grade-pop{filter:drop-shadow(0 2px 2px #633c4a44)}
+.world .notice{border-radius:13px;box-shadow:0 5px 0 #b58b9b55;transform:rotate(2deg)}
+.world .object .tag{border:1px solid #e5bac0;box-shadow:0 2px 0 #bd8b9566}
